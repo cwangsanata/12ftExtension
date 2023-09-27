@@ -1,5 +1,9 @@
-function redirect() {
-    const url = window.location.href;
-    console.log("https:12ft.io//" + url); // TODO: Remove this line
-    return "https:12ft.io//" + url;
+try {
+    document.getElementById("removePaywallBtn").addEventListener('click', function() {
+        const url = window.location.href;
+        return "https://12ft.io/" + url;
+    });
+} 
+catch (e) {
+    console.error("An error occurred while trying to remove the paywall.", e.message);
 }
